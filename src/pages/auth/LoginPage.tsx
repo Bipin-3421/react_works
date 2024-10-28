@@ -1,3 +1,5 @@
+import LoginForm from "./login/LoginForm";
+
 const LoginPage = () => {
   return (
     <div>
@@ -7,6 +9,7 @@ const LoginPage = () => {
       <p className="mt-2 text-center font-normal text-sm 3xl:text-base">
         Please sign-in to your account and start the adventure
       </p>
+      <LoginForm />
     </div>
   );
 };
