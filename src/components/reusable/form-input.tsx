@@ -1,6 +1,6 @@
 import { UseFormRegisterReturn } from "react-hook-form";
 
-import FormWrapper from "@/reusable/form-wrapper";
+import FormWrapper from "@/components/reusable/form-wrapper";
 import { Input } from "@/components/ui/input";
 
 type FormInputFieldProps = {

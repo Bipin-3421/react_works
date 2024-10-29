@@ -7,6 +7,7 @@ export const sizeConstants = {
 
 export const TOKENS = {
   AUTH_TOKEN_LABEL: "app-token",
+  MEMBER_STORE_LABEL: "app-label",
 };
 
 export const STATUS_CODES = {

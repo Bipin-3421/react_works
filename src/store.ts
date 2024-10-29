@@ -2,7 +2,7 @@ import { create } from "zustand";
 
 import { devtools, persist } from "zustand/middleware";
 
-import { TOKENS } from "./src/constants/app.constants";
+import { TOKENS } from "./constants/app.constants";
 
 export interface TokenStore {
   token: string;

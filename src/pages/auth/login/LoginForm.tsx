@@ -1,10 +1,10 @@
 import { useForm } from "react-hook-form";
 
-import FormInputField from "@/reusable/form-input";
+import FormInputField from "@/components/reusable/form-input";
 import { Button } from "@/components/ui/button";
 import { Form, FormField } from "@/components/ui/form";
 
-import { useLoginMutation } from "@/http/mutations/auth.mutation";
+import { useLoginMutation } from "@/http/mutations/auth.mutations";
 import { TLogin, loginSchema } from "@/schema/auth.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 

@@ -6,3 +6,8 @@ export const api = axios.create({
     "Content-Type": "Application/json",
   },
 });
+
+export const authAxios = axios.create({
+  baseURL: import.meta.env.VITE_PUBLIC_BACKEND_URL,
+  withCredentials: true,
+});
