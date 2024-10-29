@@ -1,5 +1,4 @@
 import { useCustomToast } from "@/hooks/useCustomToast";
-import { TLogin } from "@/schema/auth.schema";
 import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 import { api } from "./api";
@@ -15,7 +14,7 @@ export const useLoginMutation = () => {
 
   return useMutation({
     mutationKey: ["login"],
-    mutationFn: async ({ email }: TLogin) => {
+    mutationFn: async (email: string) => {
       const response = await api.post("/auth/login", { email });
       return response.data;
     },
