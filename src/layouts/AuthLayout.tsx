@@ -3,7 +3,7 @@ import { IMAGES } from "../constants/images";
 
 const AuthLayout = () => {
   return (
-    <div className=" h-screen place-items-center overflow-auto p-12 3xl:p-16">
+    <div className=" h-screen  place-items-center overflow-auto p-12 3xl:p-16">
       <div className="flex size-full flex-col items-center space-y-24 3xl:space-y-32">
         <img src={IMAGES.LOGO} className="size-52 rounded-md" alt="logo" />
         <div className="relative w-full max-w-sm 3xl:max-w-md rounded-2xl border bg-background px-8 3xl:px-12 py-10 3xl:py-14">

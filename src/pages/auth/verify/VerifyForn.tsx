@@ -26,7 +26,7 @@ const VerifyOTPForm = ({ email }: { email: string }) => {
 
   const onVerifyCompleted = () => {
     setSuccess(true);
-    navigate(authRoutes.USERS); // Redirect to dashboard
+    navigate(authRoutes.MEMBERS); // Redirect to dashboard
   };
 
   const handleSubmit = (otp: string) => {

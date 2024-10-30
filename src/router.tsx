@@ -19,8 +19,7 @@ const router = createBrowserRouter([
     element: <DashboardLayout />,
     children: [
       {
-        index: true,
-        path: "user",
+        path: "members",
         element: <MembersPage />,
       },
     ],
@@ -37,6 +36,7 @@ const router = createBrowserRouter([
       },
     ],
   },
+
   {
     path: "/member/login",
     element: <AuthLayout />,

@@ -7,6 +7,6 @@ import { ModalIds } from "@/types";
  * This is used to type the data that is passed to the modal when it is opened.
  */
 export interface ModalDataMap {
-  [ModalIds.ADD_USER]: undefined;
-  [ModalIds.UPDATE_USER]: TMember;
+  [ModalIds.ADD_MEMBER]: undefined;
+  [ModalIds.UPDATE_MEMBER]: TMember;
 }

@@ -7,10 +7,10 @@ export enum ToastIds {
   "VERIFY_TOAST" = "validate-otp",
   "MEMBER_TOAST" = "member-toast",
 }
-
 export enum ModalIds {
-  "ADD_USER" = "add-user",
-  "UPDATE_USER" = "update-user",
+  ADD_MEMBER = "add-member",
+  UPDATE_MEMBER = "update-member",
+  // Add other modal IDs as needed
 }
 
 export type ToastTexts = Record<

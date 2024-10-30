@@ -25,6 +25,7 @@ export const useGetMembers = () => {
     queryKey: [MEMBERS_QUERY_KEYS.GET_MEMBERS],
     queryFn: async () => {
       const { data } = await authAxios.get(authorizedApiRoutes.MEMBERS);
+      console.log(data?.data);
       return data?.data;
     },
   });

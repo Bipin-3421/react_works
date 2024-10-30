@@ -10,7 +10,7 @@ import { columns } from "./_table/columns";
 import { useModalStore } from "@/hooks/use-modal";
 import { useGetMembers } from "@/http/queries/member.queries";
 import { TMember } from "@/schema/members.schema";
-import { ModalIds } from "@/types";
+import { ModalIds } from "@/types/index";
 
 const MembersPage = () => {
   const { modals, openModal, closeModal, data: modalsData } = useModalStore();
@@ -26,21 +26,21 @@ const MembersPage = () => {
           addButton={{
             label: "Add members",
             icon: <Plus className="w-5 h-5 mr-2" />,
-            onClick: () => openModal(ModalIds.ADD_USER),
+            onClick: () => openModal(ModalIds.ADD_MEMBER),
           }}
         />
       </FetchWrapper>
-      {modals["add-user"] && (
+      {modals["add-member"] && (
         <AddMember
-          isOpen={modals["add-user"]}
-          toggleModal={() => closeModal(ModalIds.ADD_USER)}
+          isOpen={modals["add-member"]}
+          toggleModal={() => closeModal(ModalIds.ADD_MEMBER)}
         />
       )}
-      {modals["update-user"] && (
+      {modals["update-member"] && (
         <UpdateMember
-          isOpen={modals["update-user"]}
-          toggleModal={() => closeModal(ModalIds.UPDATE_USER)}
-          initialData={modalsData["update-user"] ?? ({} as TMember)}
+          isOpen={modals["update-member"]}
+          toggleModal={() => closeModal(ModalIds.UPDATE_MEMBER)}
+          initialData={modalsData["update-member"] ?? ({} as TMember)}
         />
       )}
     </div>

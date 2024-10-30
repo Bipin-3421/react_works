@@ -1,7 +1,7 @@
 const dashboardUrl = "/dashboard";
 
 export const authRoutes = {
-  USERS: `${dashboardUrl}/users`,
+  MEMBERS: `${dashboardUrl}/members`,
 };
 
 const authUrl = "/member";
@@ -12,6 +12,5 @@ export const routes = {
 };
 
 export const authorizedApiRoutes = {
-  INFO: `${authUrl}/info`,
-  MEMBERS: `/members`,
+  MEMBERS: `/member`,
 };
