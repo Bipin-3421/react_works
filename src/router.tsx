@@ -11,8 +11,8 @@ import { MembersPage } from "./pages";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Navigate to="/member/login" />,
+    path: "*",
+    element: <Navigate to="/dashboard/members" />,
   },
   {
     path: "/dashboard",
@@ -20,6 +20,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "members",
+        index: true,
         element: <MembersPage />,
       },
     ],

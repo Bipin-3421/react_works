@@ -15,8 +15,9 @@ export const useGetMemberQuery = () => {
   const getMemberQuery = useQuery<TMember | undefined>({
     queryKey: TAuthQueries.GetMember,
     queryFn: async () => {
-      const response = await authAxios.get(authorizedApiRoutes.INFO);
+      const response = await authAxios.get(authorizedApiRoutes.MEMBERS);
       return response?.data?.data;
+      console.log("auth queries ko data", response.data);
     },
   });
   return getMemberQuery;

@@ -5,8 +5,8 @@ import { TSidebarItem } from "@/interface/sidebar";
 export const sideBarDatas: TSidebarItem[] = [
   {
     icon: Icons.users,
-    text: "sidebar.users",
-    value: authRoutes.USERS,
+    text: "members",
+    value: authRoutes.MEMBERS,
     alert: false,
     hasChild: false,
     permission: [],

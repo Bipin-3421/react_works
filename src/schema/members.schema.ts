@@ -37,7 +37,7 @@ export const MemberSchema = z.object({
 export type TMember = z.infer<typeof MemberSchema>;
 
 // Schemas for specific DTOs
-export const memberCreateSchema = MemberSchema;
+export const memberCreateSchema = MemberSchema.omit({ id: true });
 export type MemberCreate = z.infer<typeof memberCreateSchema>;
 
 export const memberUpdateSchema = MemberSchema.partial();

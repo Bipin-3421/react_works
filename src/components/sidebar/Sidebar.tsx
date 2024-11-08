@@ -218,11 +218,7 @@ const Sidebar = (): React.JSX.Element => {
   return (
     <aside
       className={cn(
-        `h-screen hidden lg:fixed lg:block ${
-          skin?.theme === "dark" ? "bg-[#020817]" : "bg-white"
-        } z-50 max-w-[245px] top-0 left-0 duration-300 ease-in-out ${
-          expanded || isHover ? "w-[245px]" : "w-20"
-        }`
+        `h-screen hidden lg:fixed lg:block ${skin?.theme === "dark" ? "bg-[#020817]" : "bg-white"} z-50 max-w-[245px] top-0 left-0 duration-300 ease-in-out ${expanded || isHover ? "w-[245px]" : "w-20"}`
       )}
     >
       <nav

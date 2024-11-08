@@ -15,6 +15,7 @@ import { ModalIds } from "@/types/index";
 const MembersPage = () => {
   const { modals, openModal, closeModal, data: modalsData } = useModalStore();
   const { data, isLoading, ...res } = useGetMembers();
+  console.log("members page ko data", data);
 
   return (
     <div>

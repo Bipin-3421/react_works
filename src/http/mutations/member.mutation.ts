@@ -12,17 +12,16 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 /**
 Payload Type Related to User
-*/
-interface MemberPayload {
+*/ interface MemberPayload {
   id?: string;
-  data: {
+  data: Partial<{
     name: string;
     email: string;
     phoneNumber: string;
     designation: string;
     image: string;
     role: string;
-  };
+  }>;
   onSuccess?: () => void;
 }
 
@@ -45,7 +44,7 @@ export const useCreateUser = () => {
     },
     onSuccess: (_, variables) => {
       const { onSuccess } = variables;
-      onSuccess && onSuccess();
+      onSuccess?.();
       successToast({
         itemID: ToastIds.MEMBER_TOAST,
         title: CreateMember.success.title,
@@ -95,7 +94,7 @@ export const useUpdateMember = () => {
     },
     onSuccess: (_, variables) => {
       const { onSuccess } = variables;
-      onSuccess && onSuccess();
+      onSuccess?.();
       successToast({
         itemID: ToastIds.MEMBER_TOAST,
         title: CreateMember.success.title,

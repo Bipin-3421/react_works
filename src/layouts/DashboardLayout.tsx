@@ -16,14 +16,13 @@ const DashboardLayout = () => {
   const expanded = useConfig((state) => state.expanded);
   const { token } = useTokenStore((state) => state);
   const { data, isLoading } = useGetMemberQuery();
-  const { MemberDetails: memberDetails, SetMemberDetails: setMemberDetails } =
-    useMemberDetailsStore();
+  const { MemberDetails, SetMemberDetails } = useMemberDetailsStore();
 
   React.useEffect(() => {
-    if (data && Object.values(memberDetails).every((value) => !value)) {
-      setMemberDetails(data);
+    if (data && Object.values(MemberDetails).every((value) => !value)) {
+      SetMemberDetails(data);
     }
-  }, [data, memberDetails, setMemberDetails]);
+  }, [data, MemberDetails, SetMemberDetails]);
 
   if (token === "") {
     return <Navigate to={routes.LOGIN} replace />;
@@ -39,9 +38,7 @@ const DashboardLayout = () => {
       <section className="flex gap-2 ">
         <Sidebar />
         <div
-          className={`w-full h-screen overflow-y-scroll scrollbar-thin ${
-            expanded ? "lg:ml-[250px]" : "ml-20"
-          }`}
+          className={`w-full h-screen overflow-y-scroll scrollbar-thin ${expanded ? "lg:ml-[250px]" : "ml-20"}`}
         >
           <Navbar />
 

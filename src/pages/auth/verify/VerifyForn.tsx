@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { InputOTP, InputOTPSlot } from "@/components/ui/input-otp";
 
-import { authRoutes, routes } from "@/constants/route";
+import { authRoutes } from "@/constants/route";
 import {
   useLoginMutation,
   useVerifyMutation,
@@ -14,9 +14,9 @@ import {
 
 const VerifyOTPForm = ({ email }: { email: string }) => {
   const navigate = useNavigate();
-  if (!email) {
-    navigate(routes.LOGIN);
-  }
+  // if (!email) {
+  //   navigate(routes.LOGIN);
+  // }
   const [success, setSuccess] = React.useState(false);
   const [hasSent, setHasSent] = React.useState(false);
   const { mutate: resendOtp, isPending: isOTPResendLoading } =
